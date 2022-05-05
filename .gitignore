@@ -1,0 +1,7 @@
+.idea
+__pycache__
+*.sqlite3
+logs
+project_venv/*
+config/local_constants.py
+.DS_Store
