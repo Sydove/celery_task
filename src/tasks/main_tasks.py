@@ -1,4 +1,5 @@
 from confs.celery_conf import celery_app
+from datetime import datetime
 
 
 @celery_app.task
@@ -6,7 +7,7 @@ def pull_task():
     """
     轮询SQLServer，获取任务
     """
-    print("执行任务拉取作业")
+    print(f"执行一个拉取任务：{datetime.now().strftime('%Y-%m-%d:%H:%M:%S')}")
 
 
 @celery_app.task

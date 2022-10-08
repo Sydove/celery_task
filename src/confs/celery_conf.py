@@ -1,3 +1,4 @@
+from datetime import timedelta
 from celery import Celery, platforms
 from kombu import Exchange, Queue
 
@@ -56,7 +57,7 @@ celery_app.conf.update(
 celery_app.conf.beat_schedule = {
     'pull_task': {
         'task': 'tasks.main_tasks.pull_task',
-        'schedule': 10.0,
+        'schedule': timedelta(seconds=90),
         'args': ()
     },
 }

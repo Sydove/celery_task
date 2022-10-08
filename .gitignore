@@ -5,3 +5,6 @@ logs
 project_venv/*
 config/local_constants.py
 .DS_Store
+*.log
+*log
+*.db
