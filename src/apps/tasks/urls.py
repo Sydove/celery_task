@@ -9,7 +9,6 @@
 from django.urls import path
 from apps.tasks import views
 
-
 urlpatterns = [
-    path("",views.Task.as_view())
+    path("", views.Task.as_view())
 ]
