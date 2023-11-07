@@ -8,3 +8,4 @@ config/local_constants.py
 *.log
 *log
 *.db
+src/.DS_Store
