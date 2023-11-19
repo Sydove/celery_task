@@ -1,13 +1,16 @@
 version: '3.8'
 services:
   rabbitmq:
-    image: rabbitmq:3.8.3-management
+    image: rabbitmq:3.9-management
     container_name: celery_rabbitmq
     restart: always
+    privileged: true
     environment:
       - RABBITMQ_DEFAULT_VHOST=admin
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
+      - TZ=Asia/Shanghai
+      - LANG=en_US.UTF-8
     ports:
       - "5672:5672"
       - "15672:15672"
